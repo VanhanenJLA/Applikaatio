@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.chart.CategoryAxis?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.tuni.assignment.controllers.MainController">
+    <top>
+        <MenuBar>
+            <Menu text="File">
+                <MenuItem text="Settings" onAction="#openSettings"/>
+                <MenuItem text="Exit" onAction="#exitApplication"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <LineChart fx:id="lineChart" title="Electricity Prices and Wind Speeds">
+            <xAxis>
+                <CategoryAxis label="Time"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis label="Values"/>
+            </yAxis>
+        </LineChart>
+    </center>
+    <bottom>
+        <HBox spacing="10">
+            <children>
+                <CheckBox fx:id="priceCheckBox" text="Show Electricity Price" onAction="#togglePrice"/>
+                <CheckBox fx:id="windCheckBox" text="Show Wind Speed" onAction="#toggleWind"/>
+            </children>
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+        </HBox>
+    </bottom>
+</BorderPane>

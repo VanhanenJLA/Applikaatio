@@ -1,0 +1,9 @@
+{
+  "displayOptions": {
+    "showElectricityPrice": true,
+    "showWindSpeed": true
+  },
+  "startDate": "2024-09-19",
+  "endDate": "2024-09-19",
+  "city": "Helsinki"
+}
